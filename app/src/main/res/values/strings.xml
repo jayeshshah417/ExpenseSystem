@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Accountant</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string-array name="items">
+        <item>Accounts</item>
+        <item>Entries</item>
+        <item>Category</item>
+    </string-array>
+
+    <!--Labels-->
+    <string name="label_name">Name</string>
+    <string name="label_debit">Debit</string>
+    <string name="label_credit">Credit</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_limit">Amount Limit</string>
+    <string name="label_tag">Tag : </string>
+    <string name="label_account">Account : </string>
+    <string name="label_balance">Balance</string>
+</resources>
