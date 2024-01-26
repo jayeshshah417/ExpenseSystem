@@ -25,13 +25,12 @@
             android:layout_marginBottom="@dimen/layout_border_4dp"
             android:gravity="center_vertical"
             android:hint="Name"
-            android:layout_toLeftOf="@id/tv_date"
             android:inputType="textCapWords"
             android:textSize="@dimen/text_size_medium" />
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tv_name"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/layout_border_4dp"
             android:layout_marginTop="@dimen/layout_border_4dp"

@@ -31,7 +31,7 @@ class AccountActivity : AppCompatActivity(), RecyclerViewAdapterAccount.RowOnCli
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAccountBinding.inflate(layoutInflater)
-        setContentView(binding!!.root)
+        setContentView(binding.root)
         setTitle("Accounts")
 
         viewModel = ViewModelProvider(this).get(AccountantViewModel::class.java)

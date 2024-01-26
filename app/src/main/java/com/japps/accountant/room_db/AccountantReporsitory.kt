@@ -2,7 +2,6 @@ package com.japps.accountant.room_db
 
 import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.japps.accountant.AppApplication
 import com.japps.accountant.models.AccountEntryModel
 import com.japps.accountant.models.AccountModel
@@ -87,4 +86,6 @@ class AccountantReporsitory(application: AppApplication) {
     fun getAllAccountEntryDate(fromDate:Date,toDate:Date): LiveData<List<AccountEntryModel>> {
         return accountEntryDao.selectAccountEntryDate(fromDate,toDate)!!
     }
+
+
 }

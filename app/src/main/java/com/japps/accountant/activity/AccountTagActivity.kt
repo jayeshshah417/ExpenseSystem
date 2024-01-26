@@ -29,7 +29,7 @@ class AccountTagActivity : AppCompatActivity(), RecyclerViewAdapterAccountTag.Ro
         super.onCreate(savedInstanceState)
         binding = ActivityAccountBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
-        setTitle("Account Tag")
+        setTitle(getString(R.string.label_menu_accountCategory))
         recyclerViewAdapter = RecyclerViewAdapterAccountTag(ArrayList<BaseModels>(),HomeFragment.TYPE.ACCOUNT,this)
         binding.rvData.layoutManager = LinearLayoutManager(this)
         binding.rvData.adapter = recyclerViewAdapter

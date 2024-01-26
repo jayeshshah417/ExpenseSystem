@@ -1,17 +1,11 @@
 package com.japps.accountant.room_db
 
-import android.app.Application
-import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.japps.accountant.AppApplication
 import com.japps.accountant.models.AccountEntryModel
 import com.japps.accountant.models.AccountModel
 import com.japps.accountant.models.AccountTagModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import java.util.Date
 
 class AccountantViewModel: ViewModel() {
@@ -64,4 +58,5 @@ class AccountantViewModel: ViewModel() {
     fun getAllAccountEntryDate(fromDate: Date,toDate:Date ):LiveData<List<AccountEntryModel>>{
         return accountantReporsitory.getAllAccountEntryDate(fromDate,toDate)
     }
+
 }

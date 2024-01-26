@@ -49,7 +49,7 @@ class AccountEntryActivity : AppCompatActivity(), RecyclerViewAdapterAccountEntr
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAccountEntryBinding.inflate(layoutInflater)
-        setContentView(binding!!.root)
+        setContentView(binding.root)
 
         setTitle("Account Entry")
 
@@ -105,7 +105,7 @@ class AccountEntryActivity : AppCompatActivity(), RecyclerViewAdapterAccountEntr
         accWindow!!.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
     }
     private fun loadData(viewModelProvider:AccountantViewModel,fromDate: Date,toDate: Date){
-        val viewModel = viewModelProvider.getAllAccountEntryDate(fromDate!!,toDate!!).observe(this,
+        viewModelProvider.getAllAccountEntryDate(fromDate,toDate).observe(this,
             Observer {
                 if(it!=null) {
                     recyclerViewAdapter.setData(it)

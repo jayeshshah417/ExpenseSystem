@@ -65,7 +65,7 @@ class NewAccountEntryDialog(context: Context, val accountantViewModel: Accountan
                             DateUtils.getStringToDate(viewBinding.textviewDate.text.toString()),
                             viewBinding.etDebit.text.toString().toDouble(),
                             viewBinding.etCredit.text.toString().toDouble(),
-                            viewBinding.spAccount.selectedItem as AccountModel
+                            viewBinding.spAccount.selectedItem as AccountModel,
                         )
                     )
                 }else{

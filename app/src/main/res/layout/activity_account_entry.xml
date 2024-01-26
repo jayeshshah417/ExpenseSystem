@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.AccountActivity">
+    tools:context=".activity.AccountEntryActivity">
     <LinearLayout
         android:layout_margin="8dp"
         android:id="@+id/ll_dates"
@@ -40,8 +40,21 @@
             android:textStyle="bold"
             android:textColor="@color/black"/>
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
+    <TextView
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_dates"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:text="Export"
+        android:layout_height="wrap_content"
+        android:id="@+id/export"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"/>
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/export"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

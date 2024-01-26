@@ -41,12 +41,14 @@
         app:rippleColor="@color/white"
         app:tint="@color/black"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/add_item_account"
         app:fabSize="mini"
         android:visibility="gone"
+        android:text="Account"
+        app:icon="@drawable/ic_account_balance_wallet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="24dp"
@@ -55,11 +57,13 @@
         app:maxImageSize="18dp"
         app:layout_constraintBottom_toTopOf="@id/add_item"
         app:tint="@color/black"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/add_item_account_entry"
         app:fabSize="mini"
+        android:text="Account entry"
+        app:icon="@drawable/ic_account_entry"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,12 +73,14 @@
         app:rippleColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/add_item_account"
         app:tint="@color/black"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/add_item_account_tag"
         app:fabSize="mini"
         android:visibility="gone"
+        android:text="@string/label_menu_accountCategory"
+        app:icon="@drawable/ic_account_tag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="24dp"
@@ -83,4 +89,5 @@
         app:rippleColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/add_item_account_entry"
         app:tint="@color/black"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

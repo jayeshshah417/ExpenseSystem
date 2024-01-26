@@ -59,8 +59,8 @@ class AccountEntryModel(
     var debit:Double,
     @ColumnInfo(name="credit")
     var credit:Double,
-@Embedded(prefix = "acc_")
-var account_id:AccountModel): BaseModels() {
+    @Embedded(prefix = "acc_")
+    var account_id:AccountModel): BaseModels() {
     @PrimaryKey(autoGenerate = true)
     var id:Int = 0
 

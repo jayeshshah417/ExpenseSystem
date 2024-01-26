@@ -12,7 +12,7 @@ import com.japps.accountant.room_db.dao.AccountTagDao
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-@Database(entities = arrayOf(AccountModel::class,AccountEntryModel::class,AccountTagModel::class), version = 3, exportSchema = false)
+@Database(entities = arrayOf(AccountModel::class,AccountEntryModel::class,AccountTagModel::class), version = 1, exportSchema = false)
 @TypeConverters(DateConverter::class)
 abstract class AccountantRoomDb : RoomDatabase() {
     abstract fun accountDao():AccountDao

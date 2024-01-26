@@ -1,6 +1,5 @@
 package com.japps.accountant.ui.home
 
-import android.app.ActionBar
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -80,6 +78,7 @@ class HomeFragment : Fragment(),RecyclerViewAdapter.RowOnClickListener {
             accWindow!!.setLayout(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
         })
 
+
         binding.addItemAccountEntry.setOnClickListener(View.OnClickListener {
             val accountDialog = NewAccountEntryDialog(requireContext(),accountantViewModel,requireActivity()!!.supportFragmentManager,listAccount)
             accountDialog.show()
@@ -94,14 +93,6 @@ class HomeFragment : Fragment(),RecyclerViewAdapter.RowOnClickListener {
             accWindow!!.setLayout(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
         })
         accountantViewModel = ViewModelProvider(requireActivity()).get(AccountantViewModel::class.java)
-        accountantViewModel.getAllTags().observe(requireActivity(), androidx.lifecycle.Observer {
-            listTag = it
-            Log.d("Size tag",it.size.toString())
-           val new  =listResources?.get(2)+" ("+it.size+")"
-            items_array.removeAt(2)
-            items_array.add(2,new)
-            recyclerViewAdapter.notifyDataSetChanged()
-        })
 
         accountantViewModel.getAllAccount().observe(requireActivity(), androidx.lifecycle.Observer {
             listAccount = it
@@ -116,6 +107,14 @@ class HomeFragment : Fragment(),RecyclerViewAdapter.RowOnClickListener {
             val new  = listResources?.get(1)+" ("+it.size+")"
             items_array.removeAt(1)
             items_array.add(1,new)
+            recyclerViewAdapter.notifyDataSetChanged()
+        })
+        accountantViewModel.getAllTags().observe(requireActivity(), androidx.lifecycle.Observer {
+            listTag = it
+            Log.d("Size tag",it.size.toString())
+            val new  =listResources?.get(2)+" ("+it.size+")"
+            items_array.removeAt(2)
+            items_array.add(2,new)
             recyclerViewAdapter.notifyDataSetChanged()
         })
 

@@ -7,11 +7,21 @@
     <string-array name="items">
         <item>Accounts</item>
         <item>Entries</item>
-        <item>Category</item>
+        <item>@string/label_menu_accountCategory</item>
     </string-array>
 
     <!--Labels-->
+    <string name="label_menu_account">Account</string>
+    <string name="label_menu_accountCategory">Account Category</string>
+    <string name="label_menu_accountEntries">Account Entries</string>
+
+    <string name="label_addToDashboard">Add to Dashboard</string>
+
+
+
+
     <string name="label_name">Name</string>
+    <string name="label_mobile">Mobile</string>
     <string name="label_debit">Debit</string>
     <string name="label_credit">Credit</string>
     <string name="label_submit">Submit</string>
@@ -19,4 +29,7 @@
     <string name="label_tag">Tag : </string>
     <string name="label_account">Account : </string>
     <string name="label_balance">Balance</string>
+    <string name="label_partner">Partner</string>
+    <string name="label_expensetype">Expense Type</string>
+    <string name="label_expense">Expense</string>
 </resources>
